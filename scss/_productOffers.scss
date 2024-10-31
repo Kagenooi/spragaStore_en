@@ -1,0 +1,191 @@
+.productOffers {
+    width: 100%;
+    padding: 120px 0;
+
+    @media (max-width: 1580px) {
+        padding: 55px 0 70px;
+    }
+
+    @media (max-width: 980px) {
+        padding: 100px 0 50px;
+    }
+
+    &__wrapper,
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 180px;
+        padding: 70px 15px;
+        width: 100%;
+        max-width: 1740px;
+        margin: 0 auto;
+
+        @media (max-width: 1580px) {
+            padding: 70px 80px;
+            grid-gap: 20px;
+        }
+
+        @media (max-width: 980px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 45px;
+            padding: 100px 40px 70px;
+        }
+
+        @media (max-width: 580px) {
+            gap: 70px;
+            padding: 100px 20px 70px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.01em;
+    }
+
+    &__link {
+        display: block;
+        margin: 0 auto;
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+        max-width: 210px;
+        background: #080807;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.01em;
+        position: relative;
+        border-radius: 28px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            border-radius: 28px;
+            border: 1px solid #000;
+            position: absolute;
+            top: -4px;
+            left: -5px;
+            transition: .2s;
+        }
+
+        &:active::before {
+            transition: .2s;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover {
+            background: #fff;
+            color: #080807;
+            transition: .2s;
+        }
+
+        &:active {
+            transition: .2s;
+            background: #080808;
+            color: #fff;
+        }
+    }
+}
+
+// .popular {
+//     width: 100%;
+//     padding: 120px 0;
+
+//     @media (max-width: 1580px) {
+//         padding: 55px 0 70px;
+//     }
+
+//     @media (max-width: 980px) {
+//         padding: 100px 0 60px;
+//     }
+
+//     &__wrapper {
+//         display: grid;
+//         grid-template-columns: repeat(3, 1fr);
+//         grid-gap: 180px;
+//         padding: 140px 15px 70px;
+//         width: 100%;
+//         max-width: 1740px;
+//         margin: 0 auto;
+
+//         @media (max-width: 1580px) {
+//             padding: 140px 80px 70px;
+//             grid-gap: 20px;
+//         }
+
+//         @media (max-width: 980px) {
+//             display: flex;
+//             flex-wrap: wrap;
+//             align-items: center;
+//             justify-content: center;
+//             grid-gap: 70px;
+//             padding-top: 100px;
+//         }
+//     }
+
+//     &__title {
+//         text-align: center;
+//         font-size: 40px;
+//         font-weight: 700;
+//         line-height: 40px;
+//         letter-spacing: -0.01em;
+//     }
+
+//     &__link {
+//         display: block;
+//         margin: 0 auto;
+//         padding: 5px;
+//         text-align: center;
+//         width: 100%;
+//         max-width: 210px;
+//         background: #080807;
+//         color: #fff;
+//         font-size: 20px;
+//         font-weight: 700;
+//         line-height: 40px;
+//         letter-spacing: -0.01em;
+//         position: relative;
+//         border-radius: 28px;
+
+//         &::before {
+//             content: '';
+//             display: block;
+//             width: calc(100% - 2px);
+//             height: calc(100% - 2px);
+//             border-radius: 28px;
+//             border: 1px solid #000;
+//             position: absolute;
+//             top: -4px;
+//             left: -5px;
+//             transition: .2s;
+//         }
+
+//         &:active::before {
+//             transition: .2s;
+//             top: 0;
+//             left: 0;
+//         }
+
+//         &:hover {
+//             background: #fff;
+//             color: #080807;
+//             transition: .2s;
+//         }
+
+//         &:active {
+//             transition: .2s;
+//             background: #080808;
+//             color: #fff;
+//         }
+//     }
+// }

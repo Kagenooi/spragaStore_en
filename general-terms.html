@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/terms/terms.css">
+</head>
+
+<body>
+    <div id="adaptive">
+
+        <nav class="navbar">
+            <div class="navbar__wrapper">
+                <div class="navbar__lhand">
+                    <a href="index.html" class="navbar__logo">
+                        spraga's logo
+                        <img src="images/navLogo.svg" alt="spraga's logo - go to homepage" class="navbar__logo_img">
+                        <img src="images/navTabletLogo.svg" alt="spraga's logo - go to homepage"
+                            class="tablet navbar__logo_img">
+                        <img src="images/navMobileLogo.svg" alt="spraga's logo - go to homepage"
+                            class="mobile navbar__logo_img">
+                    </a>
+                    <h1 class="navbar__title">Fermented by living culture</h1>
+                </div>
+                <div class="navbar__rhand desktop">
+                    <ul class="navbar__menu">
+                        <li><a href="catalog.html" class="navbar__menu_link">Shop</a></li>
+                        <!-- <li><a href="partners.html" class="navbar__menu_link">Where to buy</a></li> -->
+                        <!-- <li><a href="blog.html" class="navbar__menu_link">Blog</a></li> -->
+                        <li><a href="about.html" class="navbar__menu_link">About spraga</a></li>
+                        <li><a href="about.html#address" class="navbar__menu_link">Contact us</a></li>
+                    </ul>
+                    <!-- <a href="login.html" class="navbar__account">
+                        <img src="images/userIcon.svg" alt="my account" class="navbar__account_icon">
+                        <img src="images/user-circle.svg" alt="my account" class="navbar__account_icon hover">
+                    </a>
+                    <button type="button" class="navbar__wishlist" onclick="toggleActive('#favorites')">
+                        <img src="images/wishlistIcon.svg" alt="wishlist" class="navbar__wishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="wishlist" class="navbar__wishlist_icon hover">
+                        <span class="navbar__wishlist_q">0</span>
+                    </button>
+                    <button type="button" class="navbar__basket" onclick="toggleActive('#basket')">
+                        <img src="images/basketIcon.svg" alt="basket" class="navbar__basket_icon">
+                        <img src="images/basketHover.svg" alt="basket" class="navbar__basket_icon hover">
+                        <span class="navbar__basket_q">0</span>
+                    </button> -->
+                    <div class="navbar__lang">
+                        <button type="button" class="navbar__lang_btn">
+                            <span class="navbar__lang_txt">CZ</span>
+                            <img src="images/smallChevronDown.svg" alt="check the language" class="navbar__lang_icon">
+                        </button>
+                        <div class="navbar__lang_choose">
+                            <button class="navbar__lang_choose_btn" type="button">CZ</button>
+                            <button class="navbar__lang_choose_btn" type="button">EN</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar__mobile">
+                    <button type="button" class="navbar__mobile_btn" onclick="toggleActive('#mobileMenu')">
+                        <img src="images/menu.svg" alt="" class="navbar__mobile_btn_icon">
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="navbar__mobile_wrapper" id="mobileMenu">
+            <div class="navbar__mobile_content">
+                <button type="button" class="navbar__mobile_closeBtn" onclick="toggleActive('#mobileMenu')">
+                    <img src="images/close.svg" alt="" class="navbar__mobile_closeBtn_icon">
+                </button>
+                <a href="index.html" class="navbar__mobile_logo">
+                    <img src="images/navMobileLogo.svg" alt="" class="navbar__mobile_logo_img">
+                </a>
+                <p class="navbar__mobile_title">Fermented by living culture </p>
+                <!-- <button type="button" class="navbar__mobile_acc">
+                    <img src="images/acc.svg" alt="" class="navbar__mobile_acc_icon">
+                    Personal account
+                </button> -->
+                <ul class="navbar__mobile_menu">
+                    <li><a href="catalog.html" class="navbar__mobile_menu_link">Shop</a></li>
+                    <!-- <li><a href="partners.html" class="navbar__mobile_menu_link">Where to buy</a></li> -->
+                    <!-- <li><a href="blog.html" class="navbar__mobile_menu_link">Blog</a></li> -->
+                    <li><a href="about.html" class="navbar__mobile_menu_link">About</a></li>
+                    <li><a href="about.html#address" class="navbar__mobile_menu_link">Contact us</a></li>
+                </ul>
+                <div class="navbar__mobile_social">
+                    <!-- <a href="" class="navbar__mobile_social_link phone">8 800 999-99-99</a> -->
+                    <a href="" class="navbar__mobile_social_link mail">info@spraga.cz</a>
+                    <div class="navbar__mobile_social_wrapper">
+                        <a href="" class="navbar__mobile_social_link">
+                            <img src="images/instagram.svg" alt="" class="navbar__mobile_social_link_icon">
+                        </a>
+                        <a href="" class="navbar__mobile_social_link">
+                            <img src="images/facebookB.svg" alt="" class="navbar__mobile_social_link_icon">
+                        </a>
+                        <a href="" class="navbar__mobile_social_link">
+                            <img src="images/youtubeB.svg" alt="" class="navbar__mobile_social_link_icon">
+                        </a>
+                    </div>
+                </div>
+                <p class="navbar__mobile_adress">Czech Republic, <br> Bohemia, city, street, <br> house</p>
+                <div class="navbar__mobile_lang">
+                    <button type="button" class="navbar__mobile_lang_btn">Czech</button>
+                    <button type="button" class="navbar__mobile_lang_btn">English</button>
+                    <button type="button" class="navbar__mobile_lang_btn">German</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="favorites" id="favorites">
+            <div class="favorites__wrapper">
+                <h2 class="favorites__title">Favorites</h2>
+                <button type="button" class="favorites__closeBtn" onclick="toggleActive('#favorites')">
+                    <img src="images/close.svg" alt="" class="favorites__closeBtn_icon">
+                </button>
+                <div class="favorites__content">
+                    <div class="product">
+                        <a href="product-classic.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob1.png" media="(max-width: 980px)">
+                                        <img src="images/products/product1.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor1.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob1.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg1.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#9CC046">
+                                <p class="product__tooltip_pr">Pure Probiotic</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Classic</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product-lingonberry.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob2.png" media="(max-width: 980px)">
+                                        <img src="images/products/product2.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor2.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob2.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg2.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#5E3C98">
+                                <p class="product__tooltip_pr">Berry Bliss</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Lingonberry</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product-mojito.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob3.png" media="(max-width: 980px)">
+                                        <img src="images/products/product3.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor3.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob3.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg3.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#F37350">
+                                <p class="product__tooltip_pr">Fresh Fusion</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Mojito</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product-exotic.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob4.png" media="(max-width: 980px)">
+                                        <img src="images/products/product4.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor4.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob4.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg4.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#DF4235">
+                                <p class="product__tooltip_pr">Tropical Tempt</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Exotic</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product-ginger.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob5.png" media="(max-width: 980px)">
+                                        <img src="images/products/product5.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor5.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob5.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg5.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#9CC046">
+                                <p class="product__tooltip_pr">Spicy Zing</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Ginger</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic promo">
+                                    <picture>
+                                        <source srcset="images/products/productMob6.png" media="(max-width: 980px)">
+                                        <img src="images/products/product6.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Promo box</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="basket" id="basket">
+            <div class="basket__wrapper">
+                <button type="button" class="basket__closeBtn" onclick="toggleActive('#basket')">
+                    <img src="images/close.svg" alt="" class="basket__closeBtn_icon">
+                </button>
+                <h2 class="basket__title">Basket</h2>
+                <div class="order__products">
+                    <div class="order__products_el">
+                        <button type="button" class="order__products_el_clearBtn">
+                            <img src="images/clear.svg" alt="" class="order__products_el_clearBtn_icon">
+                        </button>
+                        <div class="order__products_el_pic">
+                            <img src="images/productMini.png" alt="" class="order__products_el_pic_img">
+                        </div>
+                        <div class="order__products_el_desc">
+                            <h3 class="order__products_el_desc_name">ENERGY KOMBUCHA APPLE</h3>
+                            <p class="order__products_el_desc_volume">tin can 330 ml</p>
+                            <p class="order__products_el_desc_quant">Box (4 pcs х 330 ml)</p>
+                            <div class="order__products_el_quant">
+                                <button type="button" class="order__products_el_quant_btn">
+                                    <img src="images/minus.svg" alt="" class="order__products_el_quant_btn_icon">
+                                </button>
+                                <p class="order__products_el_quant_num">2</p>
+                                <button type="button" class="order__products_el_quant_btn">
+                                    <img src="images/plus.svg" alt="" class="order__products_el_quant_btn_icon">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="order__products_el_price">
+                            <p class="order__products_el_price_regular">
+                                <b>1000</b>
+                                CZK
+                            </p>
+                            <p class="order__products_el_price_real">
+                                <b>864</b>
+                                CZK
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order__products_el">
+                        <button type="button" class="order__products_el_clearBtn">
+                            <img src="images/clear.svg" alt="" class="order__products_el_clearBtn_icon">
+                        </button>
+                        <div class="order__products_el_pic">
+                            <img src="images/productMini.png" alt="" class="order__products_el_pic_img">
+                        </div>
+                        <div class="order__products_el_desc">
+                            <h3 class="order__products_el_desc_name">ENERGY KOMBUCHA APPLE</h3>
+                            <p class="order__products_el_desc_volume">tin can 330 ml</p>
+                            <p class="order__products_el_desc_quant">Box (4 pcs х 330 ml)</p>
+                            <div class="order__products_el_quant">
+                                <button type="button" class="order__products_el_quant_btn">
+                                    <img src="images/minus.svg" alt="" class="order__products_el_quant_btn_icon">
+                                </button>
+                                <p class="order__products_el_quant_num">2</p>
+                                <button type="button" class="order__products_el_quant_btn">
+                                    <img src="images/plus.svg" alt="" class="order__products_el_quant_btn_icon">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="order__products_el_price">
+                            <p class="order__products_el_price_regular">
+                                <b>1000</b>
+                                CZK
+                            </p>
+                            <p class="order__products_el_price_real">
+                                <b>864</b>
+                                CZK
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order__products_footer">
+                        <p class="order__products_footer_total">
+                            <span class="order__products_footer_total_key">Total:</span>
+                            <span class="order__products_footer_total_value">
+                                <span class="order__products_footer_total_value_summ">432</span>
+                                CZK
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="basket__footer">
+                    <button type="button" class="basket__footer_btn">Buy</button>
+                    <p class="basket__footer_pr">Continue shopping</p>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="terms">
+            <div class="terms__wrapper">
+                <div class="terms__content">
+                    <time datetime="">Updated 28.08.2024</time>
+                    <div>
+                        <h1>General Terms and Conditions</h1>
+                        <p><a href="www.spraga.cz">www.spraga.cz</a><br>
+                            Dear customers, we are pleased that you are interested in our goods and services. This
+                            document, which you are currently reading, represents our general terms and conditions
+                            (“Terms”). It is a legal document that describes everything related to shopping for goods or
+                            using the services we offer on our e-shop accessible via <a
+                                href="www.spraga.cz">www.spraga.cz</a> (“Spraga e-shop”).
+                            The Terms are intended for the purchase of goods for personal consumption. Purchasing goods
+                            for resale is not permitted on the Spraga e-shop. The typical customer of the Spraga e-shop
+                            is an individual purchasing goods for their own use or for the needs of close persons.
+                            <br> These terms are effective from <b>September 20, 2024.</b>
+                        </p>
+                    </div>
+                    <div>
+                        <h2>Chapter 1: Customer Account </h2>
+                        <h3>1.1 Creating a Customer Account</h3>
+                        <p>To use certain features of the Spraga e-shop, you may create a customer account. This account
+                            will make future purchases easier and give you access to additional benefits.</p>
+                        <br>
+                        <p>To create an account, you will need to provide personal information, such as your name,
+                            surname,
+                            email address, and set a password. Your data will be handled in accordance with our privacy
+                            policy.</p>
+                        <br>
+                        <h3>1.2 Cancelling a Customer Account</h3>
+                        <p>If you wish to cancel your customer account, you can contact us at info@spraga.cz.</p>
+                    </div>
+                    <div>
+                        <h2>Chapter 2: Terms of Use of the Spraga e-shop</h2>
+                        <p>You can use the Spraga e-shop to place orders for goods. Using the e-shop requires legal
+                            capacity
+                            and acceptance of these Terms.</p>
+                    </div>
+                    <div>
+                        <h2>Chapter 3: Orders</h2>
+                        <h3>3.1 Placing an Order</h3>
+                        <p>Orders can be placed directly through our e-shop. Select the desired products and complete
+                            your
+                            purchase. Once completed, a confirmation will be sent to the email you provided.</p>
+                        <br>
+                        <h3>3.2 Changes to Orders</h3>
+                        <p>You can change your order by contacting our customer service before the order has been
+                            shipped.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>Chapter 4: Payment</h2>
+                        <p>You can make payments for orders online via credit card, bank transfer or via PayPal</p>
+                    </div>
+                    <div>
+                        <h2>Chapter 5: Withdrawal from the Contract</h2>
+                        <p>As a customer, you have the right to withdraw from the contract within 14 days of receiving the
+                            goods without giving any reason. The goods must be returned to us in undamaged condition and in
+                            the original packaging.</p>
+                    </div>
+                    <div>
+                        <h2>Chapter 6: Data Protection</h2>
+                        <p>Spraga Beverages s.r.o. processes personal data in accordance with GDPR. For more information,
+                            please refer to our Privacy Policy available on our website.</p>
+                    </div>
+                    <div>
+                        <h2>Final Provisions</h2>
+                        <p>These terms may be updated from time to time. We will notify you of any changes through our
+                            website.
+                            If you have any questions, please contact us at <a
+                                href="mailto::info@spraga.cz">info@spraga.cz</a>.</p>
+                    </div>
+                    <div>
+                        <h2>COMPLAINT PROCEDURE</h2>
+                        <p>Dear customers, we are pleased that you are interested in our goods or services. The document you
+                            are currently reading is our complaint procedure (“Complaint Procedure”). This legal document
+                            describes the rules for exercising rights arising from defective performance (complaints) in
+                            connection with the purchase of goods or use of services offered on the e-shop accessible via <a
+                                href="">www.spraga.cz</a> (“Spraga e-shop”). <br>
+                            This Complaint Procedure applies to you if you are: (i) an individual (consumer) purchasing
+                            goods for your own needs or for the needs of your close ones, or (ii) a legal entity (business),
+                            most commonly purchasing for the purpose of office supplies (such as beverages or office and
+                            cleaning supplies). <br>
+                            Please note that the purchase of goods for the purpose of resale or further business activities
+                            is not allowed on the Spraga e-shop. Whether you are an individual or a legal entity, we will
+                            refer to you as “customer” or “you” in this document unless otherwise indicated by the context.
+                            <br>
+                            The rights and obligations not covered by this Complaint Procedure are governed by the
+                            applicable laws of the Czech Republic. <br>
+                            The Spraga e-shop is operated by <b>Spraga Beverages s.r.o.,</b> VAT: CZ19878702, with its
+                            registered office at Opletalova 1535/4, Nové Město (Praha 1), 110 00 Praha. <br>
+                            This Complaint Procedure is effective from <b>September 20, 2024.</b> <br>
+                            If you do not find an answer to your question in the Complaint Procedure, please contact us at
+                            <a href="mailto::info@spraga.cz">info@spraga.cz</a>.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>1. RIGHTS ARISING FROM DEFECTIVE PERFORMANCE</h2>
+                        <p>You have the right to claim defects that appear on the goods within 24 months of receiving them
+                            unless otherwise stated in this Complaint Procedure. This does not apply to: (a) fresh items
+                            intended for consumption within 24 hours, which must be claimed within 24 hours of receiving
+                            them; (b) goods with a designated period of usability or minimum shelf life (usually indicated
+                            on the packaging or in the instructions); (c) goods sold by weight, where the actual weight
+                            differs by no more than 30% from the weight specified in the order; (d) defects on goods that
+                            were discounted due to the same defect; (e) defects caused by excessive use or use in conditions
+                            unsuitable for such goods; (f) defects caused by improper use, storage, or maintenance in
+                            contradiction to our instructions or the manufacturer's instructions; and (g) defects caused by
+                            external factors beyond our control. <br>
+                            If you were not informed about specific features of the goods before concluding the purchase
+                            contract, we guarantee that the goods: (a) are suitable for the purpose for which such goods are
+                            typically used; (b) are delivered with the necessary accessories, installation instructions, and
+                            use instructions; and (c) conform to the quality or model sample that we provided before the
+                            purchase. <br>
+                            If a defect appears within the first year after receipt, it is assumed that the defect existed
+                            at the time of delivery, unless this is incompatible with the nature of the goods. <br>
+                            You cannot claim defects if they were caused by your own actions or if they result from normal
+                            wear and tear.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>2. HOW TO MAKE A COMPLAINT</h2>
+                        <p>You can make a complaint in the following ways: (a) via the Spraga e-shop (“Online Complaint”);
+                            (b) by contacting our customer service at info@spraga.cz or at our registered office.</p>
+                    </div>
+                    <div>
+                        <h2>Online Complaint</h2>
+                        <p>Online complaints must be submitted within 72 hours of receiving the goods. This does not apply
+                            to fresh items, which must be claimed within 24 hours, or goods with a short shelf life, which
+                            must be claimed before the expiration date.</p>
+                    </div>
+                    <div>
+                        <h2>Standard Complaint</h2>
+                        <p>For a standard complaint, you have the right to request a repair or replacement of the goods. If
+                            this is not possible, you may request a reasonable discount or withdraw from the contract.</p>
+                    </div>
+                    <div>
+                        <h2>3. COMPLAINT PROCESS</h2>
+                        <p>We recommend checking the goods immediately after receipt and reporting any defects without
+                            delay. Complaints must be resolved no later than 30 days from the date they are submitted.</p>
+                    </div>
+                    <div>
+                        <h2>4. FINAL PROVISIONS</h2>
+                        <p>This Complaint Procedure may be amended unilaterally. However, changes will not affect purchase
+                            contracts concluded before the change </p>
+                    </div>
+                </div>
+                <ul class="terms__menu">
+                    <li><a href="general-terms.html" class="terms__menu_link active">General Terms and Conditions</a></li>
+                    <li><a href="privacy-policy.html" class="terms__menu_link">Privacy Policy – Customers</a></li>
+                    <li><a href="gdpr.html" class="terms__menu_link">GDPR</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <p class="footer__title">About Spraga</p>
+                <div class="footer__desc">
+                    <ul class="footer__desc_list">
+                        <li class="footer__desc_list_el">Czech quality with a world-class taste</li>
+                        <li class="footer__desc_list_el">Unpasteurised drink</li>
+                        <!-- <li class="footer__desc_list_el">Probiotics in every drop</li> -->
+                        <li class="footer__desc_list_el">Healthy choice for every day</li>
+                    </ul>
+                    <div class="footer__desc_social">
+                        <a href="" class="footer__desc_social_el">
+                            <img src="images/facebook.svg" alt="" class="footer__desc_social_el_icon">
+                        </a>
+                        <a href="" class="footer__desc_social_el">
+                            <img src="images/inst.svg" alt="" class="footer__desc_social_el_icon">
+                        </a>
+                        <a href="" class="footer__desc_social_el">
+                            <img src="images/youtube.svg" alt="" class="footer__desc_social_el_icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__content">
+                    <div>
+                        <ul class="footer__menu">
+                            <li><a href="catalog.html" class="footer__menu_link">E-Shop</a></li>
+                            <!-- <li><a href="partners.html" class="footer__menu_link">Where to Buy</a></li> -->
+                            <!-- <li><a href="blog.html" class="footer__menu_link">Blog</a></li> -->
+                            <li><a href="about.html" class="footer__menu_link">About Spraga</a></li>
+                            <!-- <li><a href="partners.html" class="footer__menu_link">Partners</a></li> -->
+                        </ul>
+                        <div class="footer__banking">
+                            <img src="images/visa.png" alt="" class="footer__banking_logo">
+                            <img src="images/masterCard.png" alt="" class="footer__banking_logo">
+                            <img src="images/applePay.png" alt="" class="footer__banking_logo">
+                            <img src="images/googlePay.png" alt="" class="footer__banking_logo">
+                        </div>
+                    </div>
+                    <div class="footer__contacts">
+                        <!-- <a href="tel:+420999999999" class="footer__contacts_phone">+420 999 999 999</a> -->
+                        <a href="mailto:Company@email.com" class="footer__contacts_mail">info@spraga.cz</a>
+                    </div>
+                    <div class="footer__subscribe">
+                        <p class="footer__subscribe_title">Newsletter</p>
+                        <p class="footer__subscribe_subtitle">Freshly news every month</p>
+                        <form action="">
+                            <div class="footer__subscribe_form">
+                                <input type="text" name="" placeholder="Enter your email" id=""
+                                    class="footer__subscribe_form_inp">
+                                <button type="button" class="footer__subscribe_form_btn">
+                                    <img src="images/whiteArr.svg" alt="" class="footer__subscribe_form_btn_icon">
+                                </button>
+                            </div>
+                        </form>
+                        <p class="footer__subscribe_info">Don't worry, we hate spam too! You can unsubscribe at any time
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copywrite">2023 - 2024 © Spraga</p>
+                    <ul class="footer__bottom_menu">
+                        <li class="footer__bottom_menu_el"><a href="privacy-policy.html" class="footer__bottom_menu_link">Privacy policy</a></li>
+                        <li class="footer__bottom_menu_el"><a href="gdpr.html" class="footer__bottom_menu_link">GDPR</a></li>
+                        <!-- <li class="footer__bottom_menu_el"><a href="order.html" class="footer__bottom_menu_link">Shipping and payments</a></li> -->
+                        <li class="footer__bottom_menu_el"><a href="general-terms.html" class="footer__bottom_menu_link">Terms and Conditions</a></li>
+                    </ul>
+                    <p class="footer__creators">Created by <a href="Soltreex.com">Soltreex</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="js/terms.js"></script>
+    <script type="module" src="adaptiveMode/adaptive.js"></script>
+</body>
+
+</html>

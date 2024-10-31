@@ -1,0 +1,109 @@
+@import '../main';
+@import '../navbar';
+@import '../footer';
+@import '../favorites';
+@import '../basket';
+@import '../productOffers';
+@import '../productCart';
+
+
+.products {
+    padding: 170px 0 150px;
+
+    @media (max-width: 1580px) {
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: 1020px) {
+        padding-top: 184px;
+    }
+
+    @media (max-width: 520px) {
+        padding-top: 120px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    &__filter {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin: 25px 0 150px;
+
+        @media (max-width: 1020px) {
+            margin-bottom: 100px;
+        }
+        &_btn {
+            border-radius: 28px;
+            border: 1px solid #231F20;
+            color: #231F20;
+            padding: 5px 20px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22.4px;
+            letter-spacing: 0.16px;
+            text-align: center;
+            width: fit-content;
+            transition: .2s;
+
+            &.active,
+            &:hover {
+                background: #231F20;
+                color: #fff;
+                transition: .2s;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: none;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 15px;
+        grid-gap: 150px 80px;
+
+        &.active {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            @media (max-width: 1020px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 520px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 1580px) {
+            grid-gap: 150px 20px;
+            padding: 0 80px;
+        }
+
+        @media (max-width: 1020px) {
+            padding: 0 50px;
+            grid-gap: 90px 20px;
+        }
+
+        @media (max-width: 520px) {
+            padding: 0 20px;
+        }
+    }
+
+    .product {
+
+        &__bg {
+            top: 40%;
+        }
+
+        &__img {
+            width: 340px;
+        }
+    }
+}

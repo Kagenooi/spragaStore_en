@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/about/about.css">
+</head>
+<body>
+
+<div id="adaptive">
+
+    <nav class="navbar">
+        <div class="navbar__wrapper">
+            <div class="navbar__lhand">
+                <a href="index.html" class="navbar__logo">
+                    spraga's logo
+                    <img src="images/navLogo.svg" alt="spraga's logo - go to homepage" class="navbar__logo_img">
+                    <img src="images/navTabletLogo.svg" alt="spraga's logo - go to homepage"
+                        class="tablet navbar__logo_img">
+                    <img src="images/navMobileLogo.svg" alt="spraga's logo - go to homepage"
+                        class="mobile navbar__logo_img">
+                </a>
+                <h1 class="navbar__title">Fermented by living culture</h1>
+            </div>
+            <div class="navbar__rhand desktop">
+                <ul class="navbar__menu">
+                    <li><a href="catalog.html" class="navbar__menu_link">Our selection</a></li>
+                    <!-- <li><a href="partners.html" class="navbar__menu_link">Where to buy</a></li> -->
+                    <!-- <li><a href="blog.html" class="navbar__menu_link">Blog</a></li> -->
+                    <li><a href="about.html" class="navbar__menu_link">About spraga</a></li>
+                    <li><a href="#address" class="navbar__menu_link">Contact us</a></li>
+                </ul>
+                <!-- <a href="login.html" class="navbar__account">
+                    <img src="images/userIcon.svg" alt="my account" class="navbar__account_icon">
+                    <img src="images/user-circle.svg" alt="my account" class="navbar__account_icon hover">
+                </a>
+                <button type="button" class="navbar__wishlist" onclick="toggleActive('#favorites')">
+                    <img src="images/wishlistIcon.svg" alt="wishlist" class="navbar__wishlist_icon">
+                    <img src="images/wishlistHover.svg" alt="wishlist" class="navbar__wishlist_icon hover">
+                    <span class="navbar__wishlist_q">0</span>
+                </button>
+                <button type="button" class="navbar__basket" onclick="toggleActive('#basket')">
+                    <img src="images/basketIcon.svg" alt="basket" class="navbar__basket_icon">
+                    <img src="images/basketHover.svg" alt="basket" class="navbar__basket_icon hover">
+                    <span class="navbar__basket_q">0</span>
+                </button> -->
+                <div class="navbar__lang">
+                    <button type="button" class="navbar__lang_btn">
+                        <span class="navbar__lang_txt">CZ</span>
+                        <img src="images/smallChevronDown.svg" alt="check the language" class="navbar__lang_icon">
+                    </button>
+                    <div class="navbar__lang_choose">
+                        <button class="navbar__lang_choose_btn" type="button">CZ</button>
+                        <button class="navbar__lang_choose_btn" type="button">EN</button>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__mobile">
+                <button type="button" class="navbar__mobile_btn" onclick="toggleActive('#mobileMenu')">
+                    <img src="images/menu.svg" alt="" class="navbar__mobile_btn_icon">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar__mobile_wrapper" id="mobileMenu">
+        <div class="navbar__mobile_content">
+            <button type="button" class="navbar__mobile_closeBtn" onclick="toggleActive('#mobileMenu')">
+                <img src="images/close.svg" alt="" class="navbar__mobile_closeBtn_icon">
+            </button>
+            <a href="index.html" class="navbar__mobile_logo">
+                <img src="images/navMobileLogo.svg" alt="" class="navbar__mobile_logo_img">
+            </a>
+            <p class="navbar__mobile_title">Fermented by living culture </p>
+            <!-- <button type="button" class="navbar__mobile_acc">
+                <img src="images/acc.svg" alt="" class="navbar__mobile_acc_icon">
+                Personal account
+            </button> -->
+            <ul class="navbar__mobile_menu">
+                <li><a href="catalog.html" class="navbar__mobile_menu_link">Our selection</a></li>
+                <!-- <li><a href="partners.html" class="navbar__mobile_menu_link">Where to buy</a></li> -->
+                <!-- <li><a href="blog.html" class="navbar__mobile_menu_link">Blog</a></li> -->
+                <li><a href="about.html" class="navbar__mobile_menu_link">About</a></li>
+                <li><a href="#address" class="navbar__mobile_menu_link">Contact us</a></li>
+            </ul>
+            <div class="navbar__mobile_social">
+                <!-- <a href="" class="navbar__mobile_social_link phone">8 800 999-99-99</a> -->
+                <a href="" class="navbar__mobile_social_link mail">info@spraga.cz</a>
+                <div class="navbar__mobile_social_wrapper">
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/instagram.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/facebookB.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/youtubeB.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                </div>
+            </div>
+            <p class="navbar__mobile_adress">Czech Republic, <br> Bohemia, city, street, <br> house</p>
+            <div class="navbar__mobile_lang">
+                <button type="button" class="navbar__mobile_lang_btn">Czech</button>
+                <button type="button" class="navbar__mobile_lang_btn">English</button>
+                <button type="button" class="navbar__mobile_lang_btn">German</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="favorites" id="favorites">
+        <div class="favorites__wrapper">
+            <h2 class="favorites__title">Favorites</h2>
+            <button type="button" class="favorites__closeBtn" onclick="toggleActive('#favorites')">
+                <img src="images/close.svg" alt="" class="favorites__closeBtn_icon">
+            </button>
+            <div class="favorites__content">
+                <div class="product">
+                    <a href="product-classic.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob1.png" media="(max-width: 980px)">
+                                    <img src="images/products/product1.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="product__animation">
+                                <img src="images/products/productDecor1.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
+                        </div>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob1.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg1.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#9CC046">
+                            <p class="product__tooltip_pr">Pure Probiotic</p>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Classic</h3>
+                    <div class="product__price">
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
+                    </div>
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                        </button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="product-lingonberry.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob2.png" media="(max-width: 980px)">
+                                    <img src="images/products/product2.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="product__animation">
+                                <img src="images/products/productDecor2.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
+                        </div>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob2.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg2.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#5E3C98">
+                            <p class="product__tooltip_pr">Berry Bliss</p>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Lingonberry</h3>
+                    <div class="product__price">
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
+                    </div>
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                        </button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="product-mojito.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob3.png" media="(max-width: 980px)">
+                                    <img src="images/products/product3.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="product__animation">
+                                <img src="images/products/productDecor3.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
+                        </div>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob3.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg3.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#F37350">
+                            <p class="product__tooltip_pr">Fresh Fusion</p>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Mojito</h3>
+                    <div class="product__price">
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
+                    </div>
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                        </button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="product-exotic.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob4.png" media="(max-width: 980px)">
+                                    <img src="images/products/product4.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="product__animation">
+                                <img src="images/products/productDecor4.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
+                        </div>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob4.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg4.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#DF4235">
+                            <p class="product__tooltip_pr">Tropical Tempt</p>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Exotic</h3>
+                    <div class="product__price">
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
+                    </div>
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                        </button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="product-ginger.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob5.png" media="(max-width: 980px)">
+                                    <img src="images/products/product5.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="product__animation">
+                                <img src="images/products/productDecor5.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
+                        </div>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob5.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg5.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#9CC046">
+                            <p class="product__tooltip_pr">Spicy Zing</p>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Ginger</h3>
+                    <div class="product__price">
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
+                    </div>
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                        </button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="product.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic promo">
+                                <picture>
+                                    <source srcset="images/products/productMob6.png" media="(max-width: 980px)">
+                                    <img src="images/products/product6.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Promo box</h3>
+                    <div class="product__price">
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
+                    </div>
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                        </button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="basket" id="basket">
+        <div class="basket__wrapper">
+            <button type="button" class="basket__closeBtn" onclick="toggleActive('#basket')">
+                <img src="images/close.svg" alt="" class="basket__closeBtn_icon">
+            </button>
+            <h2 class="basket__title">Basket</h2>
+            <div class="order__products">
+                <div class="order__products_el">
+                    <button type="button" class="order__products_el_clearBtn">
+                        <img src="images/clear.svg" alt="" class="order__products_el_clearBtn_icon">
+                    </button>
+                    <div class="order__products_el_pic">
+                        <img src="images/productMini.png" alt="" class="order__products_el_pic_img">
+                    </div>
+                    <div class="order__products_el_desc">
+                        <h3 class="order__products_el_desc_name">ENERGY KOMBUCHA APPLE</h3>
+                        <p class="order__products_el_desc_volume">tin can 330 ml</p>
+                        <p class="order__products_el_desc_quant">Box (4 pcs х 330 ml)</p>
+                        <div class="order__products_el_quant">
+                            <button type="button" class="order__products_el_quant_btn">
+                                <img src="images/minus.svg" alt="" class="order__products_el_quant_btn_icon">
+                            </button>
+                            <p class="order__products_el_quant_num">2</p>
+                            <button type="button" class="order__products_el_quant_btn">
+                                <img src="images/plus.svg" alt="" class="order__products_el_quant_btn_icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="order__products_el_price">
+                        <p class="order__products_el_price_regular">
+                            <b>1000</b>
+                            CZK
+                        </p>
+                        <p class="order__products_el_price_real">
+                            <b>864</b>
+                            CZK
+                        </p>
+                    </div>
+                </div>
+                <div class="order__products_el">
+                    <button type="button" class="order__products_el_clearBtn">
+                        <img src="images/clear.svg" alt="" class="order__products_el_clearBtn_icon">
+                    </button>
+                    <div class="order__products_el_pic">
+                        <img src="images/productMini.png" alt="" class="order__products_el_pic_img">
+                    </div>
+                    <div class="order__products_el_desc">
+                        <h3 class="order__products_el_desc_name">ENERGY KOMBUCHA APPLE</h3>
+                        <p class="order__products_el_desc_volume">tin can 330 ml</p>
+                        <p class="order__products_el_desc_quant">Box (4 pcs х 330 ml)</p>
+                        <div class="order__products_el_quant">
+                            <button type="button" class="order__products_el_quant_btn">
+                                <img src="images/minus.svg" alt="" class="order__products_el_quant_btn_icon">
+                            </button>
+                            <p class="order__products_el_quant_num">2</p>
+                            <button type="button" class="order__products_el_quant_btn">
+                                <img src="images/plus.svg" alt="" class="order__products_el_quant_btn_icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="order__products_el_price">
+                        <p class="order__products_el_price_regular">
+                            <b>1000</b>
+                            CZK
+                        </p>
+                        <p class="order__products_el_price_real">
+                            <b>864</b>
+                            CZK
+                        </p>
+                    </div>
+                </div>
+                <div class="order__products_footer">
+                    <p class="order__products_footer_total">
+                        <span class="order__products_footer_total_key">Total:</span>
+                        <span class="order__products_footer_total_value">
+                            <span class="order__products_footer_total_value_summ">432</span>
+                            CZK
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="basket__footer">
+                <button type="button" class="basket__footer_btn">Buy</button>
+                <p class="basket__footer_pr">Continue shopping</p>
+            </div>
+        </div>
+    </div> -->
+    
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__video">
+                <img src="images/blogvideoPoster.jpg" alt="" class="header__video_item">
+                <!-- <video src="" poster="images/blogvideoPoster.jpg" class="header__video_item"></video>
+                <button type="button" class="header__video_play">
+                    <img src="images/play.png" alt="" class="header__video_play_icon">
+                </button> -->
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="about__wrapper">
+            <div class="about__pic swiper" id="about1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/ab1.png" alt="" class="about__pic_img desktop">
+                            <img src="images/ab1.png" alt="" class="about__pic_img tablet">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/ab2.png" alt="" class="about__pic_img desktop">
+                            <img src="images/ab2.png" alt="" class="about__pic_img tablet">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/ab3.png" alt="" class="about__pic_img desktop">
+                            <img src="images/ab3.png" alt="" class="about__pic_img tablet">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/ab4.png" alt="" class="about__pic_img desktop">
+                            <img src="images/ab4.png" alt="" class="about__pic_img tablet">
+                        </div>
+                    </div>
+                </div>
+                <div class="about__pic_btns">
+                    <button type="button" class="about__pic_btns_btn prev">
+                        <img src="images/whitePrev.svg" alt="" class="about__pic_btns_btn_icon">
+                    </button>
+                    <button type="button" class="about__pic_btns_btn next">
+                        <img src="images/whiteNext.svg" alt="" class="about__pic_btns_btn_icon">
+                    </button>
+                </div>
+            </div>
+            <div class="about__content">
+                <img src="images/starDecor.svg" alt="" class="about__content_decor">
+                <h2 class="about__title">A Nation Steeped in Fermentation Tradition</h2>
+                <p class="about__pr">The Czech Republic's rich history and cultural heritage make it an ideal location for Spraga's production facility. With a brewing tradition dating back to the 10th century, the country's strategic location brought new ingredients, techniques, and ideas, refining the art of fermentation over time.</p>
+                <p class="about__pr">Today, the country sees a resurgence of interest in fermented drinks, including global trends like Kombucha and traditional drinks like Kvas. The Czech Republic's well-developed infrastructure, proximity to major European hubs, and focus on innovation and sustainability create an ideal business environment. By setting up operations in the Czech Republic, Spraga taps into a rich cultural heritage, positioning itself for long-term success</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <div class="advantages__wrapper">
+            <div class="advantages__item">
+                <div class="advantages__item_subDecor">
+                    <picture class="advantages__item_subDecor_img">
+                        <source srcset="images/panapleMob.png" media="(max-width: 580px)" />
+                        <img src="images/panaple.png" alt="MDN" />
+                    </picture>
+                </div>
+                <h2 class="advantages__item_title">State-of-the-Art Facility</h2>
+                <p class="advantages__item_pr">The production facility spans 3,427 m2, providing ample space for efficient and sustainable operations.</p>
+                <img src="images/products/productBg1.svg" alt="" class="advantages__item_decor">
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__item_subDecor">
+                    <picture class="advantages__item_subDecor_img">
+                        <source srcset="images/mexaMob.png" media="(max-width: 580px)" />
+                        <img src="images/mexa.png" alt="MDN" />
+                    </picture>
+                </div>
+                <h2 class="advantages__item_title">Complete Automation</h2>
+                <p class="advantages__item_pr">The facility features a full-scale automated brewery, canning line, warehouse, and distribution system, ensuring maximum efficiency and precision in every step of the production process</p>
+                <img src="images/products/productBg2.svg" alt="" class="advantages__item_decor">
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__item_subDecor">
+                    <picture class="advantages__item_subDecor_img">
+                        <source srcset="images/apleMob.png" media="(max-width: 580px)" />
+                        <img src="images/aple.png" alt="MDN" />
+                    </picture>
+                </div>
+                <h2 class="advantages__item_title">R&D <br> Capabilities</h2>
+                <p class="advantages__item_pr">The facility boasts its own laboratory, enabling Spraga to stay at the forefront of fermented beverage production.</p>
+                <img src="images/products/productBg3.svg" alt="" class="advantages__item_decor">
+            </div>
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="about__wrapper">
+            <div class="about__pic swiper" id="about2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo1.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo2.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo3.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo4.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo5.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo6.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo7.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo8.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo9.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about__pic_el">
+                            <img src="images/abo10.png" alt="" class="about__pic_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="about__pic_btns">
+                    <button type="button" class="about__pic_btns_btn prev">
+                        <img src="images/whitePrev.svg" alt="" class="about__pic_btns_btn_icon">
+                    </button>
+                    <button type="button" class="about__pic_btns_btn next">
+                        <img src="images/whiteNext.svg" alt="" class="about__pic_btns_btn_icon">
+                    </button>
+                </div>
+            </div>
+            <div class="about__content">
+                <img src="images/starDecor.svg" alt="" class="about__content_decor">
+                <h2 class="about__title">About our production</h2>
+                <p class="about__pr">At Spraga, we're committed to delivering excellence in every can. Our state-of-the-art production facility, located in Lovosice — the "Gate to Bohemia," just halfway between Prague and Dresden in the Czech Republic — is strategically positioned to ensure efficiency and sustainability. Here, we combine cutting-edge technology with a dedicated and diverse team to produce up to 5 million aluminium cans per month. </p>
+                <p class="about__pr">What sets us apart? We're proud to have achieved 100% CO2 recuperation at our facility — a feat unmatched by any other beverage producer. Our fully automated brewery and canning lines, equipped with a high-powered Kuka palletising robot, ensure precision and speed. Additionally, our automated software synchronises all processes, from raw materials to our e-shop and traditional retail, ensuring a seamless experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="standarts">
+        <div class="standarts__wrapper">
+            <div class="standarts__desc">
+                <h2 class="standarts__desc_title">Quality standards</h2>
+                <p class="standarts__desc_pr">At Spraga, quality is paramount, and our state-of-the-art facility is equipped with cutting-edge quality automation systems to ensure the highest standards are met at every stage of production. With our on-site laboratory, we can conduct rigorous quality control tests and experiments, allowing us to monitor and optimise our processes in real-time. This enables us to identify and address any potential issues promptly, guaranteeing that every product that leaves our facility meets our exceptional quality standards. By combining human expertise with advanced automation technology, we can ensure consistency, precision, and excellence in every aspect of our fermented beverage production.</p>
+            </div>
+            <div class="standarts__pic">
+                <img src="images/standarts.png" alt="" class="standarts__pic_img">
+            </div>
+            <img src="images/xz.svg" alt="" class="standarts__decor">
+        </div>
+    </section>
+
+    <section class="driving">
+        <div class="driving__wrapper">
+            <div class="driving__pic"><img src="images/driving.png" alt="" class="driving__pic_img"></div>
+            <div class="driving__desc">
+                <div class="driving__desc_el">
+                    <h2 class="driving__desc_el_title">The Driving Force Behind Our Success</h2>
+                    <p class="driving__desc_el_pr">At Spraga, our diverse team of experts is passionate about fermented beverages and brings a wealth of experience to the table. With a commitment to continuous education and automation, our team excels in their roles. Our flat hierarchy fosters collaboration, allowing us to drive innovation, ensure quality, and deliver outstanding results that exceed customer expectations.</p>
+                </div>
+                <div class="driving__desc_el">
+                    <img src="images/drivingDecor.svg" alt="" class="driving__desc_el_decor">
+                    <img src="images/navLogo.svg" alt="" class="driving__desc_el_logo">
+                    <h2 class="driving__desc_el_title">The Heart of Our Craft</h2>
+                    <p class="driving__desc_el_pr">At Spraga, authenticity is at the heart of everything we do. We're committed to using only the finest, all-natural ingredients, sourced locally whenever possible, to create unique flavour profiles that honour their heritage. We reject artificial additives, opting for time-honoured techniques that allow our products to develop their own distinct character.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="address">
+        <div class="contact__wrapper">
+            <div class="contact__address">
+                <div class="contact__address_btns">
+                    <button type="button" data-bg="#ECECEC" data-index="0" data-activate="first" id="defaultAddress" class="contact__address_btns_btn">Legal office</button>
+                    <button type="button" data-bg="#F0E0BA" data-index="1" data-activate="second" class="contact__address_btns_btn">Head office</button>
+                    <button type="button" data-bg="#B1D6B8" data-index="2" data-activate="last" class="contact__address_btns_btn">Production and logistics</button>
+                </div>
+                <h2 class="contact__address_title">Contacts</h2>
+                <div class="contact__address_wrapper" id="first">
+                    <strong class="contact__address_strong">Legal office</strong>
+                    <p class="contact__address_info">Spraga Beverages s.r.o.</p>
+                    <p class="contact__address_info">Opletalova 1535/4, Praha 1, 110 00, Czech Republic</p>
+                    <a href="" class="contact__address_mail">info@spraga.cz</a>
+                    <!-- <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button> -->
+                </div>
+                <div class="contact__address_wrapper" id="second">
+                    <strong class="contact__address_strong">Head office</strong>
+                    <p class="contact__address_info">Spraga Beverages s.r.o.</p>
+                    <p class="contact__address_info">U Garáží 1611/1, Praha 7, Prague, 170 00, Czech Republic</p>
+                    <a href="" class="contact__address_mail">info@spraga.cz</a>
+                    <!-- <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button> -->
+                </div>
+                <div class="contact__address_wrapper" id="last">
+                    <strong class="contact__address_strong">Production and logistics</strong>
+                    <p class="contact__address_info">Spraga Beverages s.r.o.</p>
+                    <p class="contact__address_info">Průmyslová 1190, Lovosice , 410 02, Czech Republic</p>
+                    <a href="" class="contact__address_mail">info@spraga.cz</a>
+                    <!-- <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button> -->
+                </div>
+            </div>
+            <div class="contact__bg">
+                <img src="images/aboutBgDecor.png" alt="" class="contact__bg_img">
+                <img src="images/yellow.png" alt="" class="contact__bg_img">
+                <img src="images/green.png" alt="" class="contact__bg_img">
+            </div>
+            <div class="contact__map">
+                <div class="contact__map_item first">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.123075451207!2d14.4445183!3d50.101033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b956ff0cc8e27%3A0x3d68e29a238c466d!2sSpraga%20Beverages!5e1!3m2!1sen!2scz!4v1729152418451!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact__map_item second">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.3283136023742!2d14.426922276650712!3d50.08076521391295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b949291649457%3A0x940621f4089e57ee!2sOpletalova%201535%2F4%2C%20110%2000%20Nov%C3%A9%20M%C4%9Bsto!5e1!3m2!1scs!2scz!4v1729153300849!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact__map_item last">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.6623764683445!2d14.042267799999998!3d50.5110901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709810858ef59c5%3A0x71bded548cdf625c!2sSpraga%20Beverages%20Sklad%20-%20Warehouse!5e1!3m2!1sen!2scz!4v1729153690141!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- <img src="images/map.png" alt="" class="contact__map_img"> -->
+            </div>
+        </div>
+    </section>
+
+    <form action="">
+        <div class="getItTouch" id="getItTouch">
+            <div class="getItTouch__wrapper">
+                <button type="button" class="getItTouch__closeBtn" onclick="toggleModal('#getItTouch')">
+                    <img src="images/close.svg" alt="" class="getItTouch__closeBtn_icon">
+                </button>
+                <h2 class="getItTouch__title">Start a conversation</h2>
+                <label for="" class="getItTouch__lab">
+                    <button type="button" class="clearBtn getItTouch__lab_clearBtn">
+                        <img src="images/clear.svg" alt="" class="getItTouch__lab_clearBtn_icon">
+                    </button>
+                    <input type="text" name="" placeholder="Enter your email" id="" class="inp getItTouch__lab_inp">
+                    <span class="getItTouch__lab_tooltip">Please fill this field correctly</span>
+                </label>
+                <label for="" class="getItTouch__lab">
+                    <button type="button" class="clearBtn getItTouch__lab_clearBtn">
+                        <img src="images/clear.svg" alt="" class="getItTouch__lab_clearBtn_icon">
+                    </button>
+                    <input type="text" name="" placeholder="Enter your email" id="" class="inp getItTouch__lab_inp">
+                    <span class="getItTouch__lab_tooltip">Please fill this field correctly</span>
+                </label>
+                <label for="" class="getItTouch__lab">
+                    <div class="getItTouch__lab_wrapper">
+                        <div class="getItTouch__lab_code">
+                            <button type="button" class="getItTouch__lab_code_btn" id="openPhoneCode">
+                                <img src="images/flag.png" alt="" class="getItTouch__lab_code_btn_flag">
+                                <input type="text" class="getItTouch__lab_code_btn_inp" name="" id="phoneCode" value="+420">
+                                <img src="images/arrowDown.svg" alt="" class="getItTouch__lab_code_btn_arr">
+                            </button>
+                            <div class="getItTouch__lab_code_wrapper">
+                                <div class="getItTouch__lab_code_dropdown">
+                                    <button type="button" class="getItTouch__lab_code_dropdown_btn">
+                                        <img src="images/flag.png" alt="" class="getItTouch__lab_code_dropdown_btn_flag">
+                                        <span class="getItTouch__lab_code_dropdown_btn_txt">+420</span>
+                                    </button>
+                                    <button type="button" class="getItTouch__lab_code_dropdown_btn">
+                                        <img src="images/flag.png" alt="" class="getItTouch__lab_code_dropdown_btn_flag">
+                                        <span class="getItTouch__lab_code_dropdown_btn_txt">+420</span>
+                                    </button>
+                                    <button type="button" class="getItTouch__lab_code_dropdown_btn">
+                                        <img src="images/flag.png" alt="" class="getItTouch__lab_code_dropdown_btn_flag">
+                                        <span class="getItTouch__lab_code_dropdown_btn_txt">+420</span>
+                                    </button>
+                                    <button type="button" class="getItTouch__lab_code_dropdown_btn">
+                                        <img src="images/flag.png" alt="" class="getItTouch__lab_code_dropdown_btn_flag">
+                                        <span class="getItTouch__lab_code_dropdown_btn_txt">+420</span>
+                                    </button>
+                                    <button type="button" class="getItTouch__lab_code_dropdown_btn">
+                                        <img src="images/flag.png" alt="" class="getItTouch__lab_code_dropdown_btn_flag">
+                                        <span class="getItTouch__lab_code_dropdown_btn_txt">+420</span>
+                                    </button>
+                                    <button type="button" class="getItTouch__lab_code_dropdown_btn">
+                                        <img src="images/flag.png" alt="" class="getItTouch__lab_code_dropdown_btn_flag">
+                                        <span class="getItTouch__lab_code_dropdown_btn_txt">+420</span>
+                                    </button>
+                                    <button type="button" class="getItTouch__lab_code_dropdown_btn">
+                                        <img src="images/flag.png" alt="" class="getItTouch__lab_code_dropdown_btn_flag">
+                                        <span class="getItTouch__lab_code_dropdown_btn_txt">+420</span>
+                                    </button>
+                                    <button type="button" class="getItTouch__lab_code_dropdown_btn">
+                                        <img src="images/flag.png" alt="" class="getItTouch__lab_code_dropdown_btn_flag">
+                                        <span class="getItTouch__lab_code_dropdown_btn_txt">+420</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="phone" name="" placeholder="000 000 00" id="" class="inp getItTouch__lab_inp">
+                        <button type="button" class="clearBtn getItTouch__lab_clearBtn">
+                            <img src="images/clear.svg" alt="" class="getItTouch__lab_clearBtn_icon">
+                        </button>
+                    </div>
+                    <span class="getItTouch__lab_tooltip">Please fill this field correctly</span>
+                </label>
+                <label for="" class="getItTouch__lab">
+                    <button type="button" class="clearBtn getItTouch__lab_clearBtn">
+                        <img src="images/clear.svg" alt="" class="getItTouch__lab_clearBtn_icon">
+                    </button>
+                    <textarea name="" placeholder="Message" class="inp getItTouch__lab_inp" id=""></textarea>
+                    <span class="getItTouch__lab_tooltip">Please fill this field correctly</span>
+                </label>
+                <button type="button" class="getItTouch__btn" onclick="toggleModal('#getItTouch')">Send</button>
+            </div>
+        </div>
+    </form>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <p class="footer__title">About Spraga</p>
+            <div class="footer__desc">
+                <ul class="footer__desc_list">
+                    <li class="footer__desc_list_el">Czech quality with a world-class taste</li>
+                    <li class="footer__desc_list_el">Unpasteurised drink</li>
+                    <!-- <li class="footer__desc_list_el">Probiotics in every drop</li> -->
+                    <li class="footer__desc_list_el">Healthy choice for every day</li>
+                </ul>
+                <div class="footer__desc_social">
+                    <a href="" class="footer__desc_social_el">
+                        <img src="images/facebook.svg" alt="" class="footer__desc_social_el_icon">
+                    </a>
+                    <a href="" class="footer__desc_social_el">
+                        <img src="images/inst.svg" alt="" class="footer__desc_social_el_icon">
+                    </a>
+                    <a href="" class="footer__desc_social_el">
+                        <img src="images/youtube.svg" alt="" class="footer__desc_social_el_icon">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__content">
+                <div>
+                    <ul class="footer__menu">
+                        <li><a href="catalog.html" class="footer__menu_link">E-Shop</a></li>
+                        <!-- <li><a href="partners.html" class="footer__menu_link">Where to Buy</a></li> -->
+                        <!-- <li><a href="blog.html" class="footer__menu_link">Blog</a></li> -->
+                        <li><a href="about.html" class="footer__menu_link">About Spraga</a></li>
+                        <!-- <li><a href="partners.html" class="footer__menu_link">Partners</a></li> -->
+                    </ul>
+                    <div class="footer__banking">
+                        <img src="images/visa.png" alt="" class="footer__banking_logo">
+                        <img src="images/masterCard.png" alt="" class="footer__banking_logo">
+                        <img src="images/applePay.png" alt="" class="footer__banking_logo">
+                        <img src="images/googlePay.png" alt="" class="footer__banking_logo">
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <!-- <a href="tel:+420999999999" class="footer__contacts_phone">+420 999 999 999</a> -->
+                    <a href="mailto:Company@email.com" class="footer__contacts_mail">info@spraga.cz</a>
+                </div>
+                <div class="footer__subscribe">
+                    <p class="footer__subscribe_title">Newsletter</p>
+                    <p class="footer__subscribe_subtitle">Freshly news every month</p>
+                    <form action="">
+                        <div class="footer__subscribe_form">
+                            <input type="text" name="" placeholder="Enter your email" id=""
+                                class="footer__subscribe_form_inp">
+                            <button type="button" class="footer__subscribe_form_btn">
+                                <img src="images/whiteArr.svg" alt="" class="footer__subscribe_form_btn_icon">
+                            </button>
+                        </div>
+                    </form>
+                    <p class="footer__subscribe_info">Don't worry, we hate spam too! You can unsubscribe at any time
+                    </p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copywrite">2023 - 2024 © Spraga</p>
+                <ul class="footer__bottom_menu">
+                    <li class="footer__bottom_menu_el"><a href="privacy-policy.html"
+                            class="footer__bottom_menu_link">Privacy policy</a></li>
+                    <li class="footer__bottom_menu_el"><a href="gdpr.html" class="footer__bottom_menu_link">GDPR</a>
+                    </li>
+                    <li class="footer__bottom_menu_el"><a href="order.html"
+                            class="footer__bottom_menu_link">Shipping and payments</a></li>
+                    <li class="footer__bottom_menu_el"><a href="general-terms.html" class="footer__bottom_menu_link">Terms
+                            and Conditions</a></li>
+                </ul>
+                <p class="footer__creators">Created by <a href="Soltreex.com">Soltreex</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+    <script type="module" src="adaptiveMode/adaptive.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="js/about.js"></script>
+</body>
+</html>

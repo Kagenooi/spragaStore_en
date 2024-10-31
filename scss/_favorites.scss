@@ -1,0 +1,122 @@
+.favorites {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000B2;
+    z-index: 1110;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transition: .3s;
+    }
+
+    &.active &__wrapper {
+        right: 0;
+        transition: .3s;
+    }
+    &__wrapper {
+        background: #fff;
+        margin-left: auto;
+        width: 100%;
+        max-width: 768px;
+        height: 100%;
+        padding: 80px 20px;
+        overflow-y: auto;
+        position: relative;
+        right: -100%;
+        transition: .3s;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__closeBtn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        @media (max-width: 580px) {
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px;
+
+        @media (max-width: 580px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title {
+        padding-left: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        margin-bottom: 150px;
+    }
+
+    .product {
+
+        &__pic {
+            width: 270px;
+
+            
+            &.promo {
+                width: 304px;
+                height: 400px;
+                object-fit: contain;
+
+                @media (max-width: 980px) {
+                    height: 360px;
+                }
+
+                @media (max-width: 580px) {
+                    height: auto;
+                }
+            }
+            img {
+                width: 100%;
+            }
+
+            &_decor {
+                width: 277px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__tooltip {
+            width: 86px;
+            height: 86px;
+            left: 15px;
+
+            &_pr {
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+
+        &__animation {
+            right: 5px;
+
+            @media (max-width: 980px) {
+                right: 35px;
+                top: -45px;
+            }
+        }
+    }
+}

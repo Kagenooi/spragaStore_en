@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+@import '../adaptiveMode/adaptive';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: #080807;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button,
+select,
+input,
+textarea {
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+button,
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+
+select {
+    appearance: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+
+// global styles
+.btn-a {
+    display: block;
+    position: relative;
+    border-radius: 30px;
+    padding: 0 45px;
+    text-align: center;
+    color: #fff;
+    background: #F0C45E;
+    transition: .2s;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+
+    &::before {
+        content: '';
+        display: block;
+        border-radius: 30px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border: 1px solid #080807;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        transition: .2s;
+    }
+
+    &:hover {
+        background: #FACE68;
+        transition: .2s;
+    }
+
+    &:active::before {
+        top: 0;
+        left: 0;
+        transition: .2s;
+    }
+
+    &:active {
+        background: #DCB04A;
+        transition: .2s;
+    }
+}

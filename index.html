@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spraga</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/homepage/homepage.css">
+</head>
+<body>
+
+    <div id="adaptive">
+
+        <nav class="navbar">
+            <div class="navbar__wrapper">
+                <div class="navbar__lhand">
+                    <a href="index.html" class="navbar__logo">
+                        spraga's logo
+                        <img src="images/navLogo.svg" alt="spraga's logo - go to homepage" class="navbar__logo_img">
+                        <img src="images/navTabletLogo.svg" alt="spraga's logo - go to homepage"
+                            class="tablet navbar__logo_img">
+                        <img src="images/navMobileLogo.svg" alt="spraga's logo - go to homepage"
+                            class="mobile navbar__logo_img">
+                    </a>
+                    <h1 class="navbar__title">Fermented by living culture</h1>
+                </div>
+                <div class="navbar__rhand desktop">
+                    <ul class="navbar__menu">
+                        <li><a href="catalog.html" class="navbar__menu_link">Our selection</a></li>
+                        <!-- <li><a href="partners.html" class="navbar__menu_link">Where to buy</a></li> -->
+                        <!-- <li><a href="blog.html" class="navbar__menu_link">Blog</a></li> -->
+                        <li><a href="about.html" class="navbar__menu_link">About spraga</a></li>
+                        <li><a href="about.html#address" class="navbar__menu_link">Contact us</a></li>
+                    </ul>
+                    <!-- <a href="login.html" class="navbar__account">
+                        <img src="images/userIcon.svg" alt="my account" class="navbar__account_icon">
+                        <img src="images/user-circle.svg" alt="my account" class="navbar__account_icon hover">
+                    </a>
+                    <button type="button" class="navbar__wishlist" onclick="toggleActive('#favorites')">
+                        <img src="images/wishlistIcon.svg" alt="wishlist" class="navbar__wishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="wishlist" class="navbar__wishlist_icon hover">
+                        <span class="navbar__wishlist_q">0</span>
+                    </button>
+                    <button type="button" class="navbar__basket" onclick="toggleActive('#basket')">
+                        <img src="images/basketIcon.svg" alt="basket" class="navbar__basket_icon">
+                        <img src="images/basketHover.svg" alt="basket" class="navbar__basket_icon hover">
+                        <span class="navbar__basket_q">0</span>
+                    </button> -->
+                    <div class="navbar__lang">
+                        <button type="button" class="navbar__lang_btn">
+                            <span class="navbar__lang_txt">CZ</span>
+                            <img src="images/smallChevronDown.svg" alt="check the language" class="navbar__lang_icon">
+                        </button>
+                        <div class="navbar__lang_choose">
+                            <button class="navbar__lang_choose_btn" type="button">CZ</button>
+                            <button class="navbar__lang_choose_btn" type="button">EN</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar__mobile">
+                    <button type="button" class="navbar__mobile_btn" onclick="toggleActive('#mobileMenu')">
+                        <img src="images/menu.svg" alt="" class="navbar__mobile_btn_icon">
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="navbar__mobile_wrapper" id="mobileMenu">
+            <div class="navbar__mobile_content">
+                <button type="button" class="navbar__mobile_closeBtn" onclick="toggleActive('#mobileMenu')">
+                    <img src="images/close.svg" alt="" class="navbar__mobile_closeBtn_icon">
+                </button>
+                <a href="index.html" class="navbar__mobile_logo">
+                    <img src="images/navMobileLogo.svg" alt="" class="navbar__mobile_logo_img">
+                </a>
+                <p class="navbar__mobile_title">Fermented by living culture </p>
+                <!-- <button type="button" class="navbar__mobile_acc">
+                    <img src="images/acc.svg" alt="" class="navbar__mobile_acc_icon">
+                    Personal account
+                </button> -->
+                <ul class="navbar__mobile_menu">
+                    <li><a href="catalog.html" class="navbar__mobile_menu_link">Our selection</a></li>
+                    <!-- <li><a href="partners.html" class="navbar__mobile_menu_link">Where to buy</a></li> -->
+                    <!-- <li><a href="blog.html" class="navbar__mobile_menu_link">Blog</a></li> -->
+                    <li><a href="about.html" class="navbar__mobile_menu_link">About</a></li>
+                    <li><a href="about.html#address" class="navbar__mobile_menu_link">Contact us</a></li>
+                </ul>
+                <div class="navbar__mobile_social">
+                    <!-- <a href="" class="navbar__mobile_social_link phone">8 800 999-99-99</a> -->
+                    <a href="" class="navbar__mobile_social_link mail">info@spraga.cz</a>
+                    <div class="navbar__mobile_social_wrapper">
+                        <a href="" class="navbar__mobile_social_link">
+                            <img src="images/instagram.svg" alt="" class="navbar__mobile_social_link_icon">
+                        </a>
+                        <a href="" class="navbar__mobile_social_link">
+                            <img src="images/facebookB.svg" alt="" class="navbar__mobile_social_link_icon">
+                        </a>
+                        <a href="" class="navbar__mobile_social_link">
+                            <img src="images/youtubeB.svg" alt="" class="navbar__mobile_social_link_icon">
+                        </a>
+                    </div>
+                </div>
+                <p class="navbar__mobile_adress">Czech Republic, <br> Bohemia, city, street, <br> house</p>
+                <div class="navbar__mobile_lang">
+                    <button type="button" class="navbar__mobile_lang_btn">Czech</button>
+                    <button type="button" class="navbar__mobile_lang_btn">English</button>
+                    <button type="button" class="navbar__mobile_lang_btn">German</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="favorites" id="favorites">
+            <div class="favorites__wrapper">
+                <h2 class="favorites__title">Favorites</h2>
+                <button type="button" class="favorites__closeBtn" onclick="toggleActive('#favorites')">
+                    <img src="images/close.svg" alt="" class="favorites__closeBtn_icon">
+                </button>
+                <div class="favorites__content">
+                    <div class="product">
+                        <a href="product-classic.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob1.png" media="(max-width: 980px)">
+                                        <img src="images/products/product1.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor1.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob1.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg1.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#9CC046">
+                                <p class="product__tooltip_pr">Pure Probiotic</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Classic</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product-lingonberry.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob2.png" media="(max-width: 980px)">
+                                        <img src="images/products/product2.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor2.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob2.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg2.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#5E3C98">
+                                <p class="product__tooltip_pr">Berry Bliss</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Lingonberry</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product-mojito.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob3.png" media="(max-width: 980px)">
+                                        <img src="images/products/product3.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor3.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob3.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg3.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#F37350">
+                                <p class="product__tooltip_pr">Fresh Fusion</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Mojito</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product-exotic.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob4.png" media="(max-width: 980px)">
+                                        <img src="images/products/product4.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor4.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob4.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg4.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#DF4235">
+                                <p class="product__tooltip_pr">Tropical Tempt</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Exotic</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product-ginger.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic">
+                                    <picture>
+                                        <source srcset="images/products/productMob5.png" media="(max-width: 980px)">
+                                        <img src="images/products/product5.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product__animation">
+                                    <img src="images/products/productDecor5.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                                </div>
+                            </div>
+                            <picture class="product__pic_decor">
+                                <source srcset="images/products/productBgMob5.svg" media="(max-width: 980px)">
+                                <img src="images/products/productBg5.svg" alt="">
+                            </picture>
+                            <div class="product__tooltip" data-bg="#9CC046">
+                                <p class="product__tooltip_pr">Spicy Zing</p>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Ginger</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="product.html" class="product__wrapper">
+                            <div class="product__images">
+                                <div class="product__pic promo">
+                                    <picture>
+                                        <source srcset="images/products/productMob6.png" media="(max-width: 980px)">
+                                        <img src="images/products/product6.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </a>
+                        <h3 class="product__name">Kambucha Promo box</h3>
+                        <div class="product__price">
+                            <p class="product__price_regular">432 CZK</p>
+                            <p class="product__price_sale">432 CZK</p>
+                        </div>
+                        <div class="product__footer">
+                            <button type="button" class="product__footer_addWishlist active">
+                                <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                                <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
+                            </button>
+                            <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="basket" id="basket">
+            <div class="basket__wrapper">
+                <button type="button" class="basket__closeBtn" onclick="toggleActive('#basket')">
+                    <img src="images/close.svg" alt="" class="basket__closeBtn_icon">
+                </button>
+                <h2 class="basket__title">Basket</h2>
+                <div class="order__products">
+                    <div class="order__products_el">
+                        <button type="button" class="order__products_el_clearBtn">
+                            <img src="images/clear.svg" alt="" class="order__products_el_clearBtn_icon">
+                        </button>
+                        <div class="order__products_el_pic">
+                            <img src="images/productMini.png" alt="" class="order__products_el_pic_img">
+                        </div>
+                        <div class="order__products_el_desc">
+                            <h3 class="order__products_el_desc_name">ENERGY KOMBUCHA APPLE</h3>
+                            <p class="order__products_el_desc_volume">tin can 330 ml</p>
+                            <p class="order__products_el_desc_quant">Box (4 pcs х 330 ml)</p>
+                            <div class="order__products_el_quant">
+                                <button type="button" class="order__products_el_quant_btn">
+                                    <img src="images/minus.svg" alt="" class="order__products_el_quant_btn_icon">
+                                </button>
+                                <p class="order__products_el_quant_num">2</p>
+                                <button type="button" class="order__products_el_quant_btn">
+                                    <img src="images/plus.svg" alt="" class="order__products_el_quant_btn_icon">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="order__products_el_price">
+                            <p class="order__products_el_price_regular">
+                                <b>1000</b>
+                                CZK
+                            </p>
+                            <p class="order__products_el_price_real">
+                                <b>864</b>
+                                CZK
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order__products_el">
+                        <button type="button" class="order__products_el_clearBtn">
+                            <img src="images/clear.svg" alt="" class="order__products_el_clearBtn_icon">
+                        </button>
+                        <div class="order__products_el_pic">
+                            <img src="images/productMini.png" alt="" class="order__products_el_pic_img">
+                        </div>
+                        <div class="order__products_el_desc">
+                            <h3 class="order__products_el_desc_name">ENERGY KOMBUCHA APPLE</h3>
+                            <p class="order__products_el_desc_volume">tin can 330 ml</p>
+                            <p class="order__products_el_desc_quant">Box (4 pcs х 330 ml)</p>
+                            <div class="order__products_el_quant">
+                                <button type="button" class="order__products_el_quant_btn">
+                                    <img src="images/minus.svg" alt="" class="order__products_el_quant_btn_icon">
+                                </button>
+                                <p class="order__products_el_quant_num">2</p>
+                                <button type="button" class="order__products_el_quant_btn">
+                                    <img src="images/plus.svg" alt="" class="order__products_el_quant_btn_icon">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="order__products_el_price">
+                            <p class="order__products_el_price_regular">
+                                <b>1000</b>
+                                CZK
+                            </p>
+                            <p class="order__products_el_price_real">
+                                <b>864</b>
+                                CZK
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order__products_footer">
+                        <p class="order__products_footer_total">
+                            <span class="order__products_footer_total_key">Total:</span>
+                            <span class="order__products_footer_total_value">
+                                <span class="order__products_footer_total_value_summ">432</span>
+                                CZK
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="basket__footer">
+                    <button type="button" class="basket__footer_btn">Buy</button>
+                    <p class="basket__footer_pr">Continue shopping</p>
+                </div>
+            </div>
+        </div> -->
+
+        <header class="header">
+            <div class="swiper" id="headerSlider">
+                <button type="button" class="header__slider_btn prev">
+                    <img src="images/prev.svg" alt="" class="header__slider_btn_icon">
+                    <img src="images/prevHover.svg" alt="" class="header__slider_btn_icon hover">
+                </button>
+                <button type="button" class="header__slider_btn next">
+                    <img src="images/next.svg" alt="" class="header__slider_btn_icon">
+                    <img src="images/nextHover.svg" alt="" class="header__slider_btn_icon hover">
+                </button>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="header__slider_el">
+                            <div class="header__slider_el_pic">
+                                <picture>
+                                    <source srcset="images/headerDecor2.png" media="(max-width: 580px)">
+                                    <img src="images/header.jpg" alt="" class="header__slider_el_pic_img">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="header__slider_el">
+                            <div class="header__slider_el_video" id="headerVideoPlay">
+                                <video id="headerVideo" src="video/videoElement.mp4" poster="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="header__slider_el_video_item">
+                                    <source src="video/videoElement.mp4" type=""/>
+                                </video>
+                                <button type="button" class="header__slider_el_video_play">
+                                    <img src="images/play.png" alt="" class="header__slider_el_video_play_icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </header>
+
+        <section class="advantages">
+            <div class="advantages__wrapper">
+                <div class="advantages__slider swiper" id="advantagesSlider">
+                    <div class="advantages__slider_wrapper swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages1.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">Natural Ingredients</h3>
+                                <p class="advantages__slider_el_pr">Experience the wholesome goodness of our Kombucha, brewed with a blend of natural ingredients including natural yeast, and natural bacteria for a truly authentic taste.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages2.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">Contains Vitamins</h3>
+                                <p class="advantages__slider_el_pr">Our Kombucha is teeming with 50 million live cultures, working in harmony to support your gut health and overall wellbeing.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages3.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">100 % fermentation</h3>
+                                <p class="advantages__slider_el_pr">Natural fermentation boosts probiotics, preserves vitamins, and enhances flavour, supporting digestion and overall health in every sip.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages4.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">Suitable for Vegans</h3>
+                                <p class="advantages__slider_el_pr">Enjoy our vegan-friendly Kombucha, carefully crafted to meet the highest standards of plant-based living, so everyone can indulge in the benefits.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages5.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">Low Sugar (< 3.8 gr)</h3>
+                                <p class="advantages__slider_el_pr">Savour the flavour of our Kombucha, naturally sweetened with just the right amount of natural goodness, containing less than 3.8 grams of sugar.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages1.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">Natural Ingredients</h3>
+                                <p class="advantages__slider_el_pr">Experience the wholesome goodness of our Kombucha, brewed with a blend of natural ingredients including natural yeast, and natural bacteria for a truly authentic taste.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages2.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">Contains Vitamins</h3>
+                                <p class="advantages__slider_el_pr">Our Kombucha is teeming with 50 million live cultures, working in harmony to support your gut health and overall wellbeing.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages3.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">100 % fermentation</h3>
+                                <p class="advantages__slider_el_pr">Natural fermentation boosts probiotics, preserves vitamins, and enhances flavour, supporting digestion and overall health in every sip.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages4.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">Suitable for Vegans</h3>
+                                <p class="advantages__slider_el_pr">Enjoy our vegan-friendly Kombucha, carefully crafted to meet the highest standards of plant-based living, so everyone can indulge in the benefits.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages__slider_el" data-index="">
+                                <div class="advantages__slider_el_pic">
+                                    <img src="images/advantages5.svg" alt="" class="advantages__slider_el_img">
+                                </div>
+                                <h3 class="advantages__slider_el_title">Low Sugar (< 3.8 gr)</h3>
+                                <p class="advantages__slider_el_pr">Savour the flavour of our Kombucha, naturally sweetened with just the right amount of natural goodness, containing less than 3.8 grams of sugar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__slider_controlers">
+                        <button type="button" id="prev" class="advantages__slider_controlers_btn prev">
+                            <img src="images/prev.svg" alt="" class="advantages__slider_controlers_btn_icon">
+                            <img src="images/prevHover.svg" alt="" class="advantages__slider_controlers_btn_icon hover">
+                            prev
+                        </button>
+                        <button type="button" id="next" class="advantages__slider_controlers_btn next">
+                            next
+                            <img src="images/next.svg" alt="" class="advantages__slider_controlers_btn_icon">
+                            <img src="images/nextHover.svg" alt="" class="advantages__slider_controlers_btn_icon hover">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="callActionCat">
+            <div class="callActionCat__wrapper">
+                <div class="callActionCat__el">
+                    <img src="images/callActionCat1.jpg" alt="" class="callActionCat__el_bg">
+                    <div class="callActionCat__el_wrapper">
+                        <img src="images/kambuchaBg.png" alt="" class="callActionCat__el_decor">
+                        <h2 class="callActionCat__el_title">Kombucha</h2>
+                        <p class="callActionCat__el_pr">Delight in our non-pasteurised kombucha, rich in lactobacillus cultures—full of life and naturally delicious.</p>
+                        <a href="catalog.html" class="callActionCat__el_link yellow">Try our newbrand flavors</a>
+                    </div>
+                </div>
+                <div class="callActionCat__el">
+                    <img src="images/callActionCat2.png" alt="" class="callActionCat__el_bg">
+                    <div class="callActionCat__el_wrapper">
+                        <img src="images/boostersBg.png" alt="" class="callActionCat__el_decor">
+                        <h2 class="callActionCat__el_title green">Natural <br>boosters</h2>
+                        <p class="callActionCat__el_pr">Stay focused and revitalized with our non-pasteurised kombucha, a natural energy booster that enhances mental clarity!</p>
+                        <a href="404.html" class="callActionCat__el_link purple">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="productOffers">
+            <h2 class="productOffers__title">Popular</h2>
+            <div class="productOffers__wrapper">
+                <div class="product">
+                    <a href="product-classic.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob1.png" media="(max-width: 980px)">
+                                    <img src="images/products/product1.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="product__animation">
+                                <img src="images/products/productDecor1.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
+                        </div>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob1.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg1.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#9CC046">
+                            <p class="product__tooltip_pr">Pure Probiotic</p>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Classic</h3>
+                </div>
+                <div class="product">
+                    <a href="product-lingonberry.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob2.png" media="(max-width: 980px)">
+                                    <img src="images/products/product2.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="product__animation">
+                                <img src="images/products/productDecor2.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
+                        </div>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob2.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg2.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#5E3C98">
+                            <p class="product__tooltip_pr">Berry Bliss</p>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Lingonberry</h3>
+                </div>
+                <div class="product">
+                    <a href="product-exotic.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob4.png" media="(max-width: 980px)">
+                                    <img src="images/products/product4.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="product__animation">
+                                <img src="images/products/productDecor4.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
+                        </div>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob4.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg4.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#DF4235">
+                            <p class="product__tooltip_pr">Fresh Fusion</p>
+                        </div>
+                    </a>
+                    <h3 class="product__name">Kambucha Exotic</h3>
+                </div>
+            </div>
+            <a href="catalog.html" class="productOffers__link">All drinks</a>
+        </section>
+
+        <section class="about">
+            <div class="about__wrapper">
+                <div class="about__pic">
+                    <img src="images/about.jpg" alt="" class="about__pic_img">
+                </div>
+                <div class="about__content">
+                    <div class="about__headline">
+                        <h2 class="about__headline_title">About Spraga</h2>
+                        <img src="images/aboutBb.svg" alt="" class="about__headline_bb">
+                        <img src="images/heart.png" alt="" class="about__headline_decor">
+                    </div>
+                    <h3 class="about__strong">Embarking on a mission to redefine the beverage landscape.</h3>
+                    <p class="about__pr">Spraga emerges as a visionary force in the European market. Established with a passion for innovation and wellness, Spraga is set to revolutionise the industry by introducing a diverse range of health drinks, led by our expertise in kombucha.</p>
+                    <a href="about.html" class="about__link">Read more!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="blog">
+            <img src="images/starDecor.svg" alt="" class="blog__decor">
+            <div class="blog__headline">
+                <h2 class="blog__headline_title">Blog</h2>
+                <img src="images/blogDecor.png" alt="" class="blog__headline_decor">
+            </div>
+            <div class="blog__wrapper">
+                <div class="blog__items">
+                    <a href="blogArticle.html" class="blogArticle">
+                        <div class="blogArticle__pic">
+                            <img src="images/blog6.png" alt="" class="blogArticle__pic_img">
+                        </div>
+                        <h3 class="blogArticle__title">Lorem ipsum dolor sit amet consectetur</h3>
+                    </a>
+                    <a href="blogArticle.html" class="blogArticle">
+                        <div class="blogArticle__pic border">
+                            <img src="images/blog1.png" alt="" class="blogArticle__pic_img">
+                        </div>
+                        <h3 class="blogArticle__title">Lorem ipsum dolor sit amet consectetur</h3>
+                    </a>
+                    <a href="blogArticle.html" class="blogArticle">
+                        <div class="blogArticle__pic">
+                            <img src="images/blog2.png" alt="" class="blogArticle__pic_img">
+                        </div>
+                        <h3 class="blogArticle__title">Lorem ipsum dolor sit amet consectetur</h3>
+                    </a>
+                    <a href="blogArticle.html" class="blogArticle">
+                        <div class="blogArticle__pic border">
+                            <img src="images/blog3.png" alt="" class="blogArticle__pic_img">
+                        </div>
+                        <h3 class="blogArticle__title">Lorem ipsum dolor sit amet consectetur</h3>
+                    </a>
+                    <a href="blogArticle.html" class="blogArticle">
+                        <div class="blogArticle__pic">
+                            <img src="images/blog4.png" alt="" class="blogArticle__pic_img">
+                        </div>
+                        <h3 class="blogArticle__title">Lorem ipsum dolor sit amet consectetur</h3>
+                    </a>
+                    <a href="blogArticle.html" class="blogArticle">
+                        <div class="blogArticle__pic border">
+                            <img src="images/blog5.png" alt="" class="blogArticle__pic_img">
+                        </div>
+                        <h3 class="blogArticle__title">Lorem ipsum dolor sit amet consectetur</h3>
+                    </a>
+                </div>
+            </div>
+            <a href="blog.html" class="blog__link">More stories</a>
+        </section> -->
+
+        <section class="inst">
+            <img src="images/xz.svg" alt="" class="inst__decor">
+            <div class="inst__wrapper">
+                <div class="inst__desc">
+                    <div class="inst__desc_headline">
+                        <h2 class="inst__desc_headline_title">Subscribe to our Instagram</h2>
+                        <img src="images/heart.png" alt="" class="inst__desc_headline_decor">
+                    </div>
+                    <p class="inst__desc_pr">Our kombucha is crafted with a passion for natural fermentation and pure ingredients.</p>
+                    <a href="https://www.instagram.com/spraga.ch" class="inst__desc_link">@spragacesko</a>
+                </div>
+                <div class="inst__list">
+                    <div class="inst__list_slider swiper" id="inst">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="inst__list_slider_el">
+                                    <img src="images/inst1.png" alt="" class="inst__list_slider_el_img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inst__list_slider_el">
+                                    <img src="images/inst2.png" alt="" class="inst__list_slider_el_img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inst__list_slider_el">
+                                    <img src="images/inst3.png" alt="" class="inst__list_slider_el_img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inst__list_slider_el">
+                                    <img src="images/inst1.png" alt="" class="inst__list_slider_el_img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inst__list_slider_el">
+                                    <img src="images/inst2.png" alt="" class="inst__list_slider_el_img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inst__list_slider_el">
+                                    <img src="images/inst3.png" alt="" class="inst__list_slider_el_img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="" alt="" class="inst__list_decor">
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="partners">
+            <div class="partners__wrapper desktop" id="partners">
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner1.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner2.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner3.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner4.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner5.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner6.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner7.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner8.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner9.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+                <div class="partners__el">
+                    <a href="" class="partners__el_link">
+                        <img src="../images/partner10.png" alt="" class="partners__el_link_img">
+                    </a>
+                </div>
+            </div>
+        </section> -->
+
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <p class="footer__title">About Spraga</p>
+                <div class="footer__desc">
+                    <ul class="footer__desc_list">
+                        <li class="footer__desc_list_el">Czech quality with a world-class taste</li>
+                        <li class="footer__desc_list_el">Unpasteurised drink</li>
+                        <!-- <li class="footer__desc_list_el">Probiotics in every drop</li> -->
+                        <li class="footer__desc_list_el">Healthy choice for every day</li>
+                    </ul>
+                    <div class="footer__desc_social">
+                        <a href="" class="footer__desc_social_el">
+                            <img src="images/inst.svg" alt="" class="footer__desc_social_el_icon">
+                            <img src="images/instHover.svg" alt="" class="footer__desc_social_el_icon hover">
+                        </a>
+                        <a href="" class="footer__desc_social_el">
+                            <img src="images/facebook.svg" alt="" class="footer__desc_social_el_icon">
+                            <img src="images/facebookHover.svg" alt="" class="footer__desc_social_el_icon hover">
+                        </a>
+                        <a href="" class="footer__desc_social_el">
+                            <img src="images/youtube.svg" alt="" class="footer__desc_social_el_icon">
+                            <img src="images/youtubeHover.svg" alt="" class="footer__desc_social_el_icon hover">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__content">
+                    <div>
+                        <ul class="footer__menu">
+                            <li><a href="catalog.html" class="footer__menu_link">E-Shop</a></li>
+                            <!-- <li><a href="partners.html" class="footer__menu_link">Where to Buy</a></li> -->
+                            <!-- <li><a href="blog.html" class="footer__menu_link">Blog</a></li> -->
+                            <li><a href="about.html" class="footer__menu_link">About Spraga</a></li>
+                            <!-- <li><a href="partners.html" class="footer__menu_link">Partners</a></li> -->
+                        </ul>
+                        <div class="footer__banking">
+                            <img src="images/visa.png" alt="" class="footer__banking_logo">
+                            <img src="images/masterCard.png" alt="" class="footer__banking_logo">
+                            <img src="images/applePay.png" alt="" class="footer__banking_logo">
+                            <img src="images/googlePay.png" alt="" class="footer__banking_logo">
+                        </div>
+                    </div>
+                    <div class="footer__contacts">
+                        <!-- <a href="tel:+420999999999" class="footer__contacts_phone">+420 999 999 999</a> -->
+                        <a href="mailto:Company@email.com" class="footer__contacts_mail">info@spraga.cz</a>
+                    </div>
+                    <div class="footer__subscribe">
+                        <p class="footer__subscribe_title">Newsletter</p>
+                        <p class="footer__subscribe_subtitle">Freshly news every month</p>
+                        <form action="">
+                            <div class="footer__subscribe_form">
+                                <input type="text" name="" placeholder="Enter your email" id="" class="footer__subscribe_form_inp">
+                                <button type="button" class="footer__subscribe_form_btn">
+                                    <img src="images/whiteArr.svg" alt="" class="footer__subscribe_form_btn_icon">
+                                </button>
+                            </div>
+                        </form>
+                        <p class="footer__subscribe_info">Don't worry, we hate spam too! You can unsubscribe at any time
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copywrite">2023 - 2024 © Spraga</p>
+                    <ul class="footer__bottom_menu">
+                        <li class="footer__bottom_menu_el"><a href="privacy-policy.html" class="footer__bottom_menu_link">Privacy policy</a></li>
+                        <li class="footer__bottom_menu_el"><a href="gdpr.html" class="footer__bottom_menu_link">GDPR</a></li>
+                        <!-- <li class="footer__bottom_menu_el"><a href="order.html" class="footer__bottom_menu_link">Shipping and payments</a></li> -->
+                        <li class="footer__bottom_menu_el"><a href="general-terms.html" class="footer__bottom_menu_link">Terms and Conditions</a></li>
+                    </ul>
+                    <p class="footer__creators">Created by <a href="Soltreex.com">Soltreex</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="adaptiveMode/adaptive.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="js/homepage.js"></script>
+</body>
+</html>

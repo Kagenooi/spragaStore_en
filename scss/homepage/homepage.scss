@@ -130,6 +130,22 @@
                         background-size: cover;
                     }
 
+                    &#headerVideo {
+                        display: block;
+
+                        @media (max-width: 580px) {
+                            display: none;
+                        }
+                    }
+
+                    &#headerVideoMob {
+                        display: none;
+
+                        @media (max-width: 580px) {
+                            display: block;
+                        }
+                    }
+
                     source {
                         display: block;
                         width: 100%;
@@ -145,14 +161,24 @@
                     transform: translate(-50%, 0);
                     opacity: 1;
                     transition: .2s;
+                    visibility: visible;
+                    width: 270px;
+                    display: none;
 
                     @media (max-width: 580px) {
-                        bottom: 80px;
+                        bottom: 200px;
+                        width: 90px;
+                        display: block;
                     }
 
                     &.active {
                         opacity: 0;
                         transition: .2s;
+                        visibility: hidden;
+                    }
+
+                    &_icon {
+                        width: 100%;
                     }
                 }
             }
@@ -1012,6 +1038,7 @@
             right: 80px;
             bottom: 55px;
         }
+
         @media (max-width: 580px) {
             right: 20px;
             bottom: -15px;

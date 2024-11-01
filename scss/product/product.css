@@ -1979,7 +1979,6 @@ img {
 }
 .productCart__media_elSmall_img, .productCart__media_elSmall_video {
   display: block;
-  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;

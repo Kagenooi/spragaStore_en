@@ -100,19 +100,19 @@ function setPartnersSlider() {
 
 function setSlider() {
     const blogItems = document.querySelector('.blog__items');
-    blogItems.classList.add('swiper');
+    blogItems?.classList.add('swiper');
 
-    let blogEl = blogItems.querySelectorAll('.blogArticle');
+    let blogEl = blogItems?.querySelectorAll('.blogArticle');
     let blogElArr = [];
-    for (let i = 0; i < blogEl.length; i++) {
-        blogElArr[i] = blogEl[i].innerHTML;
-        blogEl[i].remove();
+    for (let i = 0; i < blogEl?.length; i++) {
+        blogElArr[i] = blogEl[i]?.innerHTML;
+        blogEl[i]?.remove();
     }
 
 
     let sliderWrapper = document.createElement('div');
     sliderWrapper.classList.add('swiper-wrapper');
-    blogItems.appendChild(sliderWrapper);
+    blogItems?.appendChild(sliderWrapper);
 
     for (let i = 0; i < blogElArr.length; i++) {
         let sliderEl = document.createElement('div');
@@ -120,21 +120,21 @@ function setSlider() {
         sliderWrapper.appendChild(sliderEl);
     }
 
-    let swiperSlides = blogItems.querySelectorAll('.swiper-slide');
-    for (let i = 0; i < swiperSlides.length; i++) {
+    let swiperSlides = blogItems?.querySelectorAll('.swiper-slide');
+    for (let i = 0; i < swiperSlides?.length; i++) {
         let blogElAppend = document.createElement('div');
         blogElAppend.classList.add(blogEl[0].classList);
         swiperSlides[i].appendChild(blogElAppend);
     }
 
-    let blogArticles = blogItems.querySelectorAll('.blogArticle');
-    for (let i = 0; i < blogArticles.length; i++) {
+    let blogArticles = blogItems?.querySelectorAll('.blogArticle');
+    for (let i = 0; i < blogArticles?.length; i++) {
         blogArticles[i].innerHTML = blogElArr[i];
     }
 
     let pagination = document.createElement('div');
     pagination.classList.add('swiper-pagination');
-    blogItems.appendChild(pagination);
+    blogItems?.appendChild(pagination);
 
     new Swiper(blogItems, {
         slidesPerView: 2,
@@ -273,3 +273,14 @@ for (let i = 0; i < advantagesSlides.length; i++) {
         
     })
 }
+
+const videoPlayerNew = document.querySelector("#headerVideoMob");
+document.querySelector("#playHeaderVideo")?.addEventListener("click", () => {
+    videoPlayerNew.play();
+    document.querySelector("#playHeaderVideo").classList.add("active");
+});
+
+videoPlayerNew?.addEventListener("click", () => {
+    videoPlayerNew.pause();
+    document.querySelector("#playHeaderVideo").classList.remove("active");
+});

@@ -1945,6 +1945,22 @@ img {
     background-size: cover;
   }
 }
+.header__slider_el_video video#headerVideo {
+  display: block;
+}
+@media (max-width: 580px) {
+  .header__slider_el_video video#headerVideo {
+    display: none;
+  }
+}
+.header__slider_el_video video#headerVideoMob {
+  display: none;
+}
+@media (max-width: 580px) {
+  .header__slider_el_video video#headerVideoMob {
+    display: block;
+  }
+}
 .header__slider_el_video video source {
   display: block;
   width: 100%;
@@ -1959,15 +1975,24 @@ img {
   transform: translate(-50%, 0);
   opacity: 1;
   transition: 0.2s;
+  visibility: visible;
+  width: 270px;
+  display: none;
 }
 @media (max-width: 580px) {
   .header__slider_el_video_play {
-    bottom: 80px;
+    bottom: 200px;
+    width: 90px;
+    display: block;
   }
 }
 .header__slider_el_video_play.active {
   opacity: 0;
   transition: 0.2s;
+  visibility: hidden;
+}
+.header__slider_el_video_play_icon {
+  width: 100%;
 }
 
 .advantages__wrapper {

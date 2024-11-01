@@ -336,6 +336,8 @@ img {
   padding: 16px;
   width: 100%;
   transition: 0.2s;
+  display: block;
+  text-align: center;
 }
 .navbar__lang_choose_btn:active {
   background: #F0C45E;

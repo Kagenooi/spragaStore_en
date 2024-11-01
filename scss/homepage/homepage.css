@@ -391,6 +391,8 @@ img {
   padding: 16px;
   width: 100%;
   transition: 0.2s;
+  display: block;
+  text-align: center;
 }
 .navbar__lang_choose_btn:active {
   background: #F0C45E;
@@ -2195,12 +2197,12 @@ img {
 @media (max-width: 1580px) {
   .callActionCat__el_wrapper {
     padding: 75px;
+    margin: 0;
   }
 }
 @media (max-width: 980px) {
   .callActionCat__el_wrapper {
     padding: 30px;
-    margin-top: 50px;
   }
 }
 .callActionCat__el:hover .callActionCat__el_bg {

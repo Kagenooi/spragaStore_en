@@ -221,6 +221,8 @@
                 padding: 16px;
                 width: 100%;
                 transition: .2s;
+                display: block;
+                text-align: center;
 
                 &:active {
                     background: #F0C45E;
